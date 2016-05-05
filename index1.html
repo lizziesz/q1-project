@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Cooks & Cookies | Home</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/journal/bootstrap.min.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="media.css">
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:400,900' rel='stylesheet' type='text/css'>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row row-eq-height" id="heading">
+            <div id="logo" class="col-xs-3">
+                <img src="https://pixabay.com/static/uploads/photo/2015/12/16/07/43/heart-1095533_960_720.jpg" class="img-responsive" alt="I Heart Cookie" id="logoImg">
+            </div>
+            <header class="col-xs-7" id="header">
+                <div id="text">
+                    <h1>Cooks & Cookies</h1>
+                    <h2><small>Your one stop shop for dessert recipes.</small></h2>
+                </div>
+            </header>
+            <div id="nav" class="col-xs-2">
+                <ul class="nav nav-pils nav-stacked list-group-items clearfix">
+                    <li id="home"> <a href="index1.html"><h5>Home</h5></a> </li>
+                    <li id="about"> <a href="index2.html"><h5>About</h5></a> </li>
+                    <li id="tips"> <a href="index3.html"><h5>Tips and Tricks</h5></a> </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="row row-eq-height" id="mainContent">
+            <div id="sidebar" class="col-xs-3 text-center">
+                <h2>Favorites</h2>
+                <div id="favoriteResults">
+
+                </div>
+            </div>
+            <div id="main" class="col-xs-9 text-center block-center">
+                <form id="search" class="form-inline">
+                    <div id="searchBar">
+                        <input type="text" placeholder="What do you want to bake?" id="searchText" class="form-control" required>
+                        <button type="submit" class="btn btn-default" value="Search" id="searchButton">Search</button>
+                    </div>
+                </form>
+                <div id="error">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div id="addOptions">
+                    <button class="btn btn-default" id="addSearchButton">Additional Search Options</button>
+                </div>
+                <div id="hiddenOptions" class="block-center">
+                    <form class="form-inline">
+                        <div class="hiddenOptForm" id="holidays">
+
+                            <h4>Holidays</h4>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="valentines-day" name="valentines-day"> Valentine's Day </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="st-patricks-day" name="st-patricks-day"> St. Patrick's Day </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="easter" name="easter"> Easter </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="fourthJuly" name="4th-of-july"> Fourth of July </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="halloween" name="halloween"> Halloween </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="thanksgiving" name="thanksgiving"> Thanksgiving </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="hanukkah" name="hanukkah"> Hanukkah </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="christmas" name="christmas"> Christmas </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="required-ingredients" class="hiddenOptForm">
+                            <h4>Required Ingredients</h4>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="chocolateChips" name="chocolate+chips" id="check"> Chocolate Chips </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="marshmallow" name="marshmallows" id="check"> Marshmallows </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="cinnamon" name="cinnamon" id="check"> Cinnamon </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="peanutButter" name="peanut+butter" id="check"> Peanut Butter </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="fruit" name="fruit" id="check"> Fruit </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="nutella" name="Nutella" id="check"> Nutella </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="pumpkin" name="pumpkin" id="check"> Pumpkin </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="must-avoid" class="hiddenOptForm">
+                            <h4>Must Avoid</h4>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="gluten" name="Gluten-Free" id="393"> Gluten </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="eggs" name="Egg-Free" id="397"> Eggs </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="Dairy" name="Dairy-Free" id="396"> Dairy </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="peanuts" name="Peanut-Free" id="394"> Peanuts </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="nuts" name="Tree Nut-Free" id="395"> Tree Nuts </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div id="results">
+                    <ul class="list-group">
+                    </ul>
+                </div>
+                <div>
+
+                    <ul class="list-group" id="moreResultsList">
+                    </ul>
+                    <div>
+                        <div id="moreResultsButton">
+                            <button class="btn btn-default" value="Search" id="moreButton"> More Results </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <footer class="col-xs-12">
+                <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
+                <p> Copyright 2016. </p>
+                <div id="yummly"></div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

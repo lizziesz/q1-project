@@ -1,0 +1,319 @@
+
+
+
+.row-eq-height {
+  display: flex;
+}
+
+#logo {
+  background-color: black;
+  padding: 0px !important;
+}
+
+#logoImg {
+  min-width: 100%;
+  margin-bottom: 0px !important;
+}
+
+header {
+  background-color: #F84F3E;
+  width: 100%;
+}
+
+h1 {
+  font-size: 8em;
+  font-family: 'Cookie';
+}
+
+#nav {
+  padding: 0px !important;
+  background-color: purple;
+  margin-bottom: 0px !important;
+}
+
+#home {
+  background-color: #1491C4;
+  margin-bottom: 0px !important;
+  color: black;
+
+  padding: 10px;
+  /*padding-left: 5px;*/
+  font-size: 15px;
+  display: inline-block;
+  /*font-family: 'Chivo';*/
+  text-align: center;
+
+}
+
+#home a {
+  color: black;
+}
+
+#about {
+  background-color: #3A7891;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+#tips {
+  background-color: #3A7891;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#mainContent {
+  min-height: 40em;
+}
+
+#mainContent {
+  background-color: lightblue;
+}
+
+#search {
+  padding-top: 25px;
+}
+
+input {
+  margin: 7px;
+}
+
+#searchText {
+  width: 60%;
+}
+
+#searchButton {
+  width: 15%;
+  background-color: #7A5DC7;
+}
+
+#moreButton {
+  width: 15%;
+  background-color: #7A5DC7;
+}
+
+#addSearchButton  {
+  background-color: #7A5DC7;
+  }
+
+#results {
+  border-top: 2px solid black;
+  width: 100%;
+}
+
+#results li {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: white;
+  color: black;
+  width: 33%;
+  vertical-align: middle;
+  /*height: 100%;*/
+  line-height: 100%;
+
+}
+
+#results li div {
+  padding: 5px;
+  /*margin: 5px;*/
+}
+
+#moreResultsList li {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: white;
+  color: black;
+  width: 33%;
+  vertical-align: middle;
+  height: 100%;
+  line-height: 100%;
+
+}
+
+#moreResultsList li div {
+  padding: 5px;
+  margin: 5px;
+}
+
+#moreResultsButton {
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+#error {
+  color: red;
+}
+
+#sidebar {
+  background-color: #7A5DC7;
+}
+
+#sidebar h2 {
+  /*font-family: 'Cookie';*/
+  /*font-size: 4em;*/
+}
+
+#favoriteResults {
+  border-top: 2px solid black;
+  color: black;
+  padding: 5px;
+
+}
+
+#favoriteResults  a {
+  color: black;
+  padding-top: 5px;
+}
+
+#favoriteResults button {
+  float: right;
+}
+
+.fave {
+  margin: 10px 0;
+  padding: 10px;
+  height: 210px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  text-align: left;
+}
+
+#favoriteResults img {
+  width: 75%;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  float: left;
+}
+
+
+#addOptions {
+  margin: 10px;
+}
+
+#hiddenOptions {
+  background:rgba(255,255,255,0.5);
+  margin: 30px;
+  width: 60%;
+  justify-content: center;
+  display: inline-block;
+  padding: 20px;
+}
+
+/*#hiddenOptForm {
+  display: inline-block;
+  padding: 20px;
+}*/
+
+#moreResults {
+  margin: 10px;
+}
+
+#check {
+  display: inline-block;
+}
+
+.remove {
+  float: right;
+  margin-top: 0px;
+}
+
+#webAbout {
+  color: black;
+  padding-top: 30px;
+}
+
+#webAbout p {
+  text-align: left;
+  background:rgba(255,255,255,0.5);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: 'Archivo Narrow';
+}
+
+.eachTip {
+    color: black;
+    text-align: left;
+    background:rgba(255,255,255,0.5);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Archivo Narrow";
+}
+
+.eachTip li {
+  display: block;
+  padding: 5px;
+}
+
+footer {
+  background-color: #F84F3E;
+  padding: 20px;
+  color: black;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+}
+
+#text small {
+  color: white;
+}
+
+footer span {
+  float: left;
+  color: white;
+}
+
+footer p {
+  color: white;
+  float: left;
+  margin-left: 5px;
+}
+
+.btn-warning {
+  height: 20px;
+  width: 20px;
+}
+
+.glyphicon-remove {
+  position: relative;
+  text-align: center;
+  right: 7px;
+  top: -5px;
+}
+
+.glyphicon-star {
+  position: relative;
+  text-align: center;
+  right: 7px;
+  top: -8px;
+}
+
+.btn-danger {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  left: 10px;
+  top: -10px;
+}

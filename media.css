@@ -229,6 +229,9 @@
   #moreButton {
     overflow: hidden;
   }
+  .fave {
+    height: 140px;
+  }
 }
 
 @media(max-width: 453px) {
@@ -264,11 +267,11 @@
 }
 
 @media(max-width: 400px) {
-  .fave {
-    height: 140px;
-  }
   #name {
     font-size: 0.8em;
+  }
+  .fave {
+    height: 130px;
   }
 }
 
@@ -344,10 +347,6 @@
     text-align: left;
     position: relative;
     left: -10px;
-  }
-
-  .fave {
-    height: 130px;
   }
 }
 

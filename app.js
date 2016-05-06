@@ -87,11 +87,33 @@ $(document).ready(function() {
             $('#moreResultsButton').on('click', 'button', function(e) {
               e.preventDefault();
               var newText = $('#searchText').val();
+              var reqIng2 = $('#required-ingredients input:checked');
+              var reqIngUrl2 = '';
+              if(reqIng2) {
+                reqIng2.each(function(recipe) {
+                  reqIngUrl2 += '&allowedIngredient[]=' + reqIng2[recipe].name;
+                });
+              }
+              var avoidIng2 = $('#must-avoid input:checked');
+              var avoidIngUrl2 = '';
+              if(avoidIng2) {
+                avoidIng2.each(function(recipe) {
+                  avoidIngUrl2 += '&allowedAllergy[]=' + avoidIng2[recipe].id + '^' + avoidIng2[recipe].name;
+                });
+              }
+              var holidays2 = $('#holidays input:checked');
+              var holidaysUrl2 = '';
+              if(holidays2) {
+                holidays2.each(function(recipe) {
+                  holidaysUrl2 += '&allowedHoliday[]=holiday^holiday-' + holidays2[recipe].name;
+                });
+                console.log(holidaysUrl2);
+              }
               var newStartVal = getRandomInt(11, 100);
               console.log(newStartVal);
 
               $.ajax({
-                url: 'http://api.yummly.com/v1/api/recipes?_app_id=340d1d95&_app_key=7e0092d58dd4c8cac6f79cde2a9e786f&q=' + newText + '&requirePictures=true&allowedCourse[]=course^course-Desserts' + reqIngUrl + avoidIngUrl + holidaysUrl + '&start=' + newStartVal,
+                url: 'http://api.yummly.com/v1/api/recipes?_app_id=340d1d95&_app_key=7e0092d58dd4c8cac6f79cde2a9e786f&q=' + newText + '&requirePictures=true&allowedCourse[]=course^course-Desserts' + reqIngUrl2 + avoidIngUrl2 + holidaysUrl2 + '&start=' + newStartVal,
                 method: 'GET',
                 dataType: 'jsonp',
                 success: function(data) {

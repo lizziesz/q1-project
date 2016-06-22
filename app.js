@@ -74,13 +74,10 @@ $(document).ready(function() {
 
                 $('#results').append(recipeLi);
 
-
-
               }).error(function(data) {
                 $('#results').append("Sorry, something went wrong...");
                 console.log("Sorry");
               });
-
 
             });
 
@@ -175,7 +172,7 @@ $(document).ready(function() {
     localStorage.removeItem();
   }
 
-  $(document).on('click', '.star', function(e) {
+    $(document).on('click', '.star', function(e) {
     e.preventDefault();
     var shortLi = '<div class="fave">' + '<button type="button" class="btn btn-danger btn-small remove"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button><div id="faveContent">' + $(this).parent().parent().children()[0].outerHTML + $(this).parent().parent().children()[1].innerHTML + '</div></div>';
     $('#favoriteResults').append(shortLi);

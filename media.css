@@ -4,6 +4,7 @@
   }
   #heading {
     max-height: 15em;
+    overflow: hidden;
   }
   #home {
     max-height: 5em;
@@ -14,7 +15,7 @@
     width: 100%;
   }
   #tips {
-    max-height: 5em;
+    min-height: 15em;
     width: 100%;
   }
   .nav {
@@ -32,11 +33,27 @@
   #mainContent {
     min-height: 50em;
   }
+  .fave img {
+    height: 150px;
+  }
+}
+
+@media(max-width: 1490px) {
+
 }
 
 @media(max-width: 1400px) {
   #mainContent {
     min-height: 40em;
+  }
+  .fave {
+    height: 222px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .fave {
+    height: 200px;
   }
 }
 
@@ -264,11 +281,11 @@
 }
 
 @media(max-width: 400px) {
-  .fave {
-    height: 140px;
-  }
   #name {
     font-size: 0.8em;
+  }
+  .fave {
+    height: 130px;
   }
 }
 
@@ -344,10 +361,6 @@
     text-align: left;
     position: relative;
     left: -10px;
-  }
-
-  .fave {
-    height: 130px;
   }
 }
 

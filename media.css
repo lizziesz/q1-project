@@ -246,6 +246,9 @@
   #moreButton {
     overflow: hidden;
   }
+  .fave {
+    height: 140px;
+  }
 }
 
 @media(max-width: 453px) {

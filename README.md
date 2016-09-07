@@ -1,5 +1,5 @@
 # 1-project: Cooks & Cookies
-# Q1 Project for Galvanize full stack web bootcamp
+Q1 Project for Galvanize full stack web bootcamp
 
 Deployed URL: http://cooks-and-cookies.s3-website-us-west-2.amazonaws.com/
 

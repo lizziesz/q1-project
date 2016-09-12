@@ -6,7 +6,6 @@ $(document).ready(function() {
   //toggle the additional options search bar
   $('#hiddenOptions').hide();
   $('#moreResultsButton').hide();
-  // $('#moreResults').hide();
   $('#addOptions').on('click', 'button', function() {
       $('#hiddenOptions').slideToggle();
   });
@@ -16,7 +15,6 @@ $(document).ready(function() {
   $('#searchButton').on('click', function(e) {
     e.preventDefault();
     var text = $('#searchText').val();
-    // $('#moreResultsList').html('');
     //set additional search parameters
     var reqIng = $('#required-ingredients input:checked');
     var reqIngUrl = '';
@@ -49,11 +47,8 @@ $(document).ready(function() {
       }
       var startVal = getRandomInt(1, 100);
       //
-      // console.log(startVal);
-      // $('#moreResults').show();
       $('#error').html('');
       $('#results').html('');
-      // $('#moreResults').html('');
       $('#moreResultsList').html('');
       $('#yummly').html('');
       $.ajax({
@@ -70,8 +65,6 @@ $(document).ready(function() {
               dataType: 'jsonp'
             }).success(function(data) {
                 recipeLi = $('<li style="height: 100%"><a href="' + data.source.sourceRecipeUrl + '" target="_blank" id="url"><div id="name"> <strong>' + data.name + '</strong></div></a><div><img src="' + data.images[0].hostedMediumUrl + '"></div><div><button type="button" class="btn btn-warning btn-small star"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button></div><div id="rating"> Yummly Rating: ' + data.rating + '</div><div id="time"> Total Time: ' + data.totalTime + '</div></li>');
-                // shortLi = $('<div style="height: 100%" id="favRecipes"><a href="' + data.source.sourceRecipeUrl + '" target="_blank"><strong>' + data.name + '</strong></a><img src="' + data.images[0].hostedSmallUrl + '"></div>')
-
                 $('#results').append(recipeLi);
 
               }).error(function(data) {
@@ -104,10 +97,8 @@ $(document).ready(function() {
                 holidays2.each(function(recipe) {
                   holidaysUrl2 += '&allowedHoliday[]=holiday^holiday-' + holidays2[recipe].name;
                 });
-                console.log(holidaysUrl2);
               }
               var newStartVal = getRandomInt(11, 100);
-              console.log(newStartVal);
 
               $.ajax({
                 url: 'http://api.yummly.com/v1/api/recipes?_app_id=340d1d95&_app_key=7e0092d58dd4c8cac6f79cde2a9e786f&q=' + newText + '&requirePictures=true&allowedCourse[]=course^course-Desserts' + reqIngUrl2 + avoidIngUrl2 + holidaysUrl2 + '&start=' + newStartVal,
@@ -141,27 +132,23 @@ $(document).ready(function() {
 
   });
 
-  // var favorites = [];
   function addToLocalStorage(favorites) {
     var tempObj = {};
     for (var i = 0; i < favorites.length; i++) {
       tempObj[i] = favorites[i]
     };
 
-    // console.log(tempObj);
-
     favoritesData = JSON.stringify(tempObj);
 
     window.localStorage.favorites = favoritesData;
-    // console.log(favorites);
+
   }
 
   function getFromLocalStorage() {
     if(window.localStorage.favorites) {
     favoritesData2 = JSON.parse(window.localStorage.favorites);
-    // console.log(favoritesData2);
+
     for(var key in favoritesData2) {
-      // console.log(favoritesData2[key]);
       favorites.push(favoritesData2[key]);
       $('#favoriteResults').append(favoritesData2[key]);
     }
@@ -186,16 +173,11 @@ $(document).ready(function() {
     $(this).parent().remove();
     var json = JSON.parse(window.localStorage.favorites);
     for(var key in json) {
-      // console.log(json[key], $(this).parent()[0].outerHTML);
       if(json[key] === $(this).parent()[0].outerHTML) {
-        // console.log('found a match');
         delete json[key];
       }
     }
     window.localStorage.favorites = JSON.stringify(json);
   });
-
-
-
 
 });

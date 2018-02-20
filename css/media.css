@@ -70,8 +70,11 @@
 }
 
 @media(max-width: 899px) {
-  #sidebar {
-    min-width: 33%;
+  #sidebar img {
+    display: none;
+  }
+  .fave {
+    height: auto;
   }
   #results li {
     width: 40%;
@@ -121,9 +124,6 @@
 }
 
 @media(max-width: 679px) {
-  #sidebar {
-    width: 45%;
-  }
   #searchButton {
     width: 40%;
   }
@@ -136,8 +136,11 @@
 }
 
 @media(max-width: 593px) {
-  #sidebar {
-    min-width: 50%;
+  #sidebar h2 {
+    display: none;
+  }
+  #favoriteResults {
+    border-top: none;
   }
   #text h2 {
     display: none;
@@ -164,6 +167,21 @@
   }
 }
 
+@media(max-width: 575px) {
+  #home {
+    max-height: 3em;
+    min-height: 3em;
+  }
+  #about {
+    max-height: 3em;
+    min-height: 3em;
+  }
+  #tips {
+    max-height: 3em;
+    min-height: 3em;
+  }
+}
+
 @media(max-width: 532px) {
   .hiddenOptForm ul {
     font-size: 0.6em;
@@ -179,15 +197,12 @@
 @media(max-width: 500px) {
   #home {
     padding: 5px;
-    min-height: 5em;
   }
   #about {
     padding: 5px;
-    min-height: 5em;
   }
   #tips {
     padding: 5px;
-    min-height: 5em;
   }
   #text h1 {
     font-size: 6em;
@@ -197,9 +212,6 @@
   }
   #main {
     overflow: scroll;
-  }
-  .fave {
-    height: 150px;
   }
 }
 
@@ -242,9 +254,6 @@
   #moreButton {
     overflow: hidden;
   }
-  .fave {
-    height: 140px;
-  }
 }
 
 @media(max-width: 453px) {
@@ -263,11 +272,6 @@
   .eachTip {
     font-size: 0.9em;
   }
-
-  /*}
-  #sidebar {
-    min-width: 30%;
-  }*/
 }
 
 @media(max-width: 405px) {
@@ -282,9 +286,6 @@
 @media(max-width: 400px) {
   #name {
     font-size: 0.8em;
-  }
-  .fave {
-    height: 130px;
   }
 }
 
@@ -304,14 +305,24 @@
 }
 
 @media(max-width: 375px) {
-  /*#home {
-    font-size: 1em;
+  #header {
+    max-width: 60%;
+    min-width: 60%;
+  }
+  #nav {
+    width: 40%;
+  }
+  #home {
+    max-height: 5em;
+    min-height: 5em;
   }
   #about {
-    font-size: 1em;
-  }*/
+    max-height: 5em;
+    min-height: 5em;
+  }
   #tips {
-    padding-top: 1px;
+    max-height: 5em;
+    min-height: 7em;
   }
 }
 
@@ -347,12 +358,6 @@
   footer p {
     font-size: 0.8em;
   }
-  /*#home {
-    font-size: 0.9em;
-  }
-  #about {
-    font-size: 0.9em;
-  }*/
   #tips h5 {
     margin-top: 1px;
   }
@@ -368,31 +373,3 @@
     font-size: 0.6em;
   }
 }
-
-/*@media(max-width: 490px) {
-  .row {
-    min-width: 100%;
-  }
-  #sidebar {
-    min-width: 100%;
-  }
-  #main {
-    min-width: 100%;
-  }
-}*/
-
-
-
-/*@media (max-width: 515px) {
-  #searchText {
-    width: 40%;
-  }
-  #searchButton {
-    width: 30%;
-  }
-  #mainContent {
-    min-height: 30em;
-  }
-}
-
-@media(max-width:)*/

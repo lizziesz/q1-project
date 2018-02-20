@@ -39,8 +39,9 @@ h1 {
   font-size: 15px;
   display: inline-block;
   /*font-family: 'Chivo';*/
-  text-align: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #home a {
@@ -52,11 +53,13 @@ h1 {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
   color: black;
-  text-align: center;
   padding: 10px;
   font-size: 15px;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #tips {
@@ -64,9 +67,11 @@ h1 {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
   color: black;
-  text-align: center;
   padding: 10px;
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #mainContent {
@@ -83,6 +88,10 @@ h1 {
 
 input {
   margin: 7px;
+}
+
+#searchBar {
+  width: 100%;
 }
 
 #searchText {
@@ -118,9 +127,8 @@ input {
   color: black;
   width: 33%;
   vertical-align: middle;
-  /*height: 100%;*/
+  height: 100%;
   line-height: 100%;
-
 }
 
 #results li div {
@@ -140,12 +148,11 @@ input {
   vertical-align: middle;
   height: 100%;
   line-height: 100%;
-
 }
 
 #moreResultsList li div {
   padding: 5px;
-  margin: 5px;
+  /*margin: 5px;*/
 }
 
 #moreResultsButton {
@@ -215,10 +222,14 @@ input {
   padding: 20px;
 }
 
-/*#hiddenOptForm {
+#hiddenOptForm {
   display: inline-block;
   padding: 20px;
-}*/
+}
+
+.hiddenListItem {
+  float: left;
+}
 
 #moreResults {
   margin: 10px;
@@ -280,7 +291,7 @@ li {
   color: white;
 }
 
-footer span {
+footer svg {
   float: left;
   color: white;
 }
@@ -296,18 +307,19 @@ footer p {
   width: 20px;
 }
 
-.glyphicon-remove {
+.fa-times {
   position: relative;
   text-align: center;
   right: 7px;
   top: -5px;
 }
 
-.glyphicon-star {
+.fa-star {
   position: relative;
   text-align: center;
-  right: 7px;
-  top: -8px;
+  right: 9px;
+  top: -9px;
+  color: white;
 }
 
 .btn-danger {

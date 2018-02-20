@@ -7,15 +7,15 @@
     overflow: hidden;
   }
   #home {
-    max-height: 5em;
+    min-height: 5.5em;
     width: 100%;
   }
   #about {
-    max-height: 5em;
+    min-height: 5.5em;
     width: 100%;
   }
   #tips {
-    min-height: 15em;
+    min-height: 5.5em;
     width: 100%;
   }
   .nav {
@@ -38,10 +38,6 @@
   }
 }
 
-@media(max-width: 1490px) {
-
-}
-
 @media(max-width: 1400px) {
   #mainContent {
     min-height: 40em;
@@ -57,7 +53,7 @@
   }
 }
 
-@media(max-width: 1034px) {
+@media(max-width: 1100px) {
   #text {
     font-size: 0.75em;
   }

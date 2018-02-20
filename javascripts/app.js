@@ -36,7 +36,6 @@ $(document).ready(function() {
       holidays.each(function(recipe) {
         holidaysUrl += '&allowedHoliday[]=holiday^holiday-' + holidays[recipe].name;
       });
-      console.log(holidaysUrl);
     }
 
 
@@ -64,12 +63,11 @@ $(document).ready(function() {
               method: 'GET',
               dataType: 'jsonp'
             }).success(function(data) {
-                recipeLi = $('<li style="height: 100%"><a href="' + data.source.sourceRecipeUrl + '" target="_blank" id="url"><div id="name"> <strong>' + data.name + '</strong></div></a><div><img src="' + data.images[0].hostedMediumUrl + '"></div><div><button type="button" class="btn btn-warning btn-small star"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button></div><div id="rating"> Yummly Rating: ' + data.rating + '</div><div id="time"> Total Time: ' + data.totalTime + '</div></li>');
+                recipeLi = $('<li style="height: 100%"><a href="' + data.source.sourceRecipeUrl + '" target="_blank" id="url"><div id="name"> <strong>' + data.name + '</strong></div></a><div><img src="' + data.images[0].hostedMediumUrl + '"></div><div><button type="button" class="btn btn-warning btn-small star"><i class="fas fa-star"></i></button></div><div id="rating"> Yummly Rating: ' + data.rating + '</div><div id="time"> Total Time: ' + data.totalTime + '</div></li>');
                 $('#results').append(recipeLi);
 
               }).error(function(data) {
                 $('#results').append("Sorry, something went wrong...");
-                console.log("Sorry");
               });
 
             });
@@ -112,7 +110,7 @@ $(document).ready(function() {
                       method: 'GET',
                       dataType: 'jsonp',
                       success: function(data) {
-                        recipeLi = $('<li style="height: 100%"><a href="' + data.source.sourceRecipeUrl + '" target="_blank" id="url"><div id="name"> <strong>' + data.name + '</strong></div></a><div><img src="' + data.images[0].hostedMediumUrl + '"></div><div><button type="button" class="btn btn-warning btn-small star"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></button></div><div id="rating"> Yummly Rating: ' + data.rating + '</div><div id="time"> Total Time: ' + data.totalTime + '</div></li>');
+                        recipeLi = $('<li style="height: 100%"><a href="' + data.source.sourceRecipeUrl + '" target="_blank" id="url"><div id="name"> <strong>' + data.name + '</strong></div></a><div><img src="' + data.images[0].hostedMediumUrl + '"></div><div><button type="button" class="btn btn-warning btn-small star"><i class="fas fa-star"></i></button></div><div id="rating"> Yummly Rating: ' + data.rating + '</div><div id="time"> Total Time: ' + data.totalTime + '</div></li>');
                         $('#moreResultsList').append(recipeLi);
                       }
                   });
@@ -161,7 +159,7 @@ $(document).ready(function() {
 
     $(document).on('click', '.star', function(e) {
     e.preventDefault();
-    var shortLi = '<div class="fave">' + '<button type="button" class="btn btn-danger btn-small remove"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button><div id="faveContent">' + $(this).parent().parent().children()[0].outerHTML + $(this).parent().parent().children()[1].innerHTML + '</div></div>';
+    var shortLi = '<div class="fave">' + '<button type="button" class="btn btn-danger btn-small remove"><i class="fas fa-times"></i></button><div id="faveContent">' + $(this).parent().parent().children()[0].outerHTML + $(this).parent().parent().children()[1].innerHTML + '</div></div>';
     $('#favoriteResults').append(shortLi);
     favorites.push(shortLi);
     addToLocalStorage(favorites);
